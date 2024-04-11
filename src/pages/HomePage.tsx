@@ -1,9 +1,8 @@
 export function HomePage(){
     return (
-        <div>
-            <p>This is the home page</p>
-            <p>Thank you for coming to the home page</p>
-            <p>You will forever be rewarded for this!</p>
+        <div className="container mx-auto py-8">
+            <h1 className="text-3xl font-bold text-center">Making Commerce Better for Everyone</h1>
+            <p className="mt-4 text-lg text-gray-700 text-center">Discover why millions of enterpreneurs choose Shopify to build their business - from hello world to IPO</p>
         </div>
     )
 }
