@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 function App(){
@@ -16,10 +16,18 @@ function App(){
           {/* Navigation Links */}
           <div className='flex items-center'>
             <div className='hidden md:block'>
-              <Link to="" className='text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium'>Home</Link>
-              <Link to="/shop" className='text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium'>Shop</Link>
-              <Link to="/about" className='text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium'>About</Link>
-              <Link to="/contact" className='text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium'>Contact</Link>
+            <NavLink to="" className={({isActive}) => `text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${isActive ? "text-yellow-300" : "border-transparent"}`}>
+                Home
+              </NavLink>
+              <NavLink to="/shop" className={({isActive}) => `text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${isActive ? "text-yellow-300" : "border-transparent"}`}>
+                Shop
+                </NavLink>
+              <NavLink to="/about" className={({isActive}) => `text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${isActive ? "text-yellow-300" : "border-transparent"}`}>
+                About
+              </NavLink>
+              <NavLink to="/contact" className={({isActive}) => `text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${isActive ? "text-yellow-300" : "border-transparent"}`}>
+                Contact
+              </NavLink>
 
             </div>
             {/* Mobile Menu Button */}

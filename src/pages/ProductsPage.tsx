@@ -1,8 +1,14 @@
+import { products } from "../data/products"
+
 export function ProductsPage() {
     return (
-        <div className="container mx-auto py-8">
-            <h1 className="text-3xl font-bold text-center">These are the products!</h1>
-            <p className="mt-4 text-lg text-gray-700 text-center">Why didn't you think these are the products?</p>
+        <div className="text-center p-5">
+            <h2 className="text-xl font-bold text-slate-600">Here are some great tools for React</h2>
+            <ul className="list-none m-0 p-0">
+                {products.map((product) => (
+                    <li key={product.id} className="p-1 text-base text-slate-800">{product.name}</li>
+                ))}
+            </ul>
         </div>
     )
 }
