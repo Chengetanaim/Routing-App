@@ -3,6 +3,7 @@ import { Header } from "./Header";
 import { ProductsPage } from "./pages/ProductsPage";
 import { HomePage } from "./pages/HomePage";
 import { ErrorPage } from "./pages/ErrorPage";
+import { ProductPage } from "./pages/ProductPage";
 
 
 const router = createBrowserRouter([
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
             {
                 path: '/shop',
                 element: <ProductsPage/>
+            },
+            {
+                path: '/shop/:id',
+                element: <ProductPage/>
             }
         ]
     },
