@@ -29,6 +29,10 @@ function App(){
                 Contact
               </NavLink>
 
+              <NavLink to="/cart" className={({isActive}) => `text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${isActive ? "text-yellow-300" : "border-transparent"}`}>
+                Cart
+              </NavLink>
+
             </div>
             {/* Mobile Menu Button */}
             <div className='md:hidden'>
